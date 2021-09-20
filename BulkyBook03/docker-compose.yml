@@ -1,0 +1,13 @@
+version: '3.6'
+services: 
+  mssql-server:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    volumes:
+      - ./data:/var/opt/mssql/data
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "Docker@2021"
+    ports:
+      - 1433:1433
+      
+    
